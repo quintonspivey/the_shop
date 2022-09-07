@@ -8,7 +8,7 @@ import {BrowserRouter,Routes,Route} from 'react-router-dom';
 function App() {
   return (
     <BrowserRouter>
-    <div >
+    <div className="d-flex flex-column site-container" >
       <header className="App-header">
         <Navbar  bg="dark" variant="dark" expand ={false}>
          <Container >
@@ -39,9 +39,10 @@ function App() {
         </header>
         <main>
         <Routes>
-            <Route path="/product/:slug" element={<ProductPage />} />
-            <Route path="/" element={<HomePage />} />
-            <Route path='signin' element={<SignInPage/>}/>
+        <Route path="/" element={<HomePage />} />
+            <Route path="/product/:name" element={<ProductPage />} />
+           
+            <Route path='/signin' element={<SignInPage/>}/>
           </Routes>
 
         </main>
